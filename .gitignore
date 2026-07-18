@@ -20,6 +20,9 @@ dist/
 .env
 .env.*
 
+!.env.example
+
+
 # ======================================================
 # Jupyter Notebooks
 # ======================================================
@@ -109,6 +112,7 @@ sentence_transformers/
 data/raw/
 data/processed/
 data/interim/
+
 
 # Keep folder structure
 !data/.gitkeep
