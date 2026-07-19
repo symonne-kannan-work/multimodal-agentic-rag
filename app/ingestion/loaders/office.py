@@ -1,4 +1,5 @@
 import logfire
+#from pathlib import Path
 from unstructured.partition.auto import partition
 
 def parse_office(file_path: str):
@@ -7,7 +8,7 @@ def parse_office(file_path: str):
     Parses Office documents (.docx, .pptx) using the Unstructured library.
     Unlike PDFs, these formats are structured and lightweight, so they are processed locally.
     """
-    
+
     with logfire.span("📄 Office Document Parsing", filename=file_path):
         try:
             # Unstructured automatically detects if it's docx or pptx
@@ -23,4 +24,4 @@ def parse_office(file_path: str):
         except Exception as e:
             logfire.error(f"❌ Office Parse Failed: {e}")
             raise e
-    
+
